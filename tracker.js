@@ -1,19 +1,17 @@
 // list of dependencies here.
-const mysql = require('mysql');
+const mysql = require('mysql12');
 const inquirer = require('inquirer');
-const consoleTable = require('console.table');
-const util = require('util');
+const cTable = require('console.table');
 
 // Create the mysql connection
 let connection = mysql.createConnection({
     host: 'localhost',
-    port: 3001,
+    port: 3306,
     user: 'root',
     password: '',
     database: 'employee_DB'
 });
 
-connection.query = util.promisify(connection.query);
 
 connection.connect(function (err) {
     if (err) throw err;
