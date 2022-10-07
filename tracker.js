@@ -1,12 +1,12 @@
 // list of dependencies here.
-const mysql = require('mysql12');
+const mysql = require('mysql2');
 const inquirer = require('inquirer');
 const cTable = require('console.table');
 
 // Create the mysql connection
 let connection = mysql.createConnection({
     host: 'localhost',
-    port: 3306,
+    port: 3001,
     user: 'root',
     password: '',
     database: 'employee_DB'
